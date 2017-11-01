@@ -1,0 +1,50 @@
+* Curated Hepatitis B Virus Alignments from GenBank Data
+
+** Introduction
+This repository contains the souce code for the pipeline described in the following publication:
+
+*Bell, T. G., Yousif, M. and Kramvis, A.* (2016) /Bioinformatic curation and alignment of genotyped hepatitis B virus (HBV) sequence data from the GenBank public database./ SpringerPlus *5*: 1896.
+
+The paper is open-access and is available here:
+
+https://springerplus.springeropen.com/articles/10.1186/s40064-016-3312-0
+
+The alignments are available for download here:
+
+http://hvdr.bioinf.wits.ac.za/alignments/index.html
+
+** Dependencies
+The pipeline consists of BASH and Python scripts. Python 2.7 was used throughout development and testing. All development and testing was performed on computers running Ubuntu. The following packages should be installed as follows:
+
+=sudo apt-get install blast2 ncbi-blast+ ncbi-blast+-legacy emboss zip=
+
+The packages above are required for the following external applications:
+
+- blastn
+- formatdb
+- needle
+- zip
+
+** Preparation
+This pipeline processes sequence data from the hepatitis B virus (HBV). The pipeline requires an input file in GenBank (.gb) format, consisting of the full GenBank records of the required sequences.
+
+** Usage
+The `runAll.sh` file will execute the pipeline. Usage is as follows:
+
+=Usage: runAll.sh <input file> <dated folder>=
+
+The "dated folder" will be created and all output files will be placed in this folder
+
+** Version History
+
+|---------+------------+-----------------|
+| Version | Date       | Notes           |
+|---------+------------+-----------------|
+|     1.0 | 2017/11/01 | Initial release |
+|---------+------------+-----------------|
+
+** Adaptation for other organisms
+Researchers working on other suitable organisms are encouraged to fork this project and to adapt it accordingly. Please cite the paper referenced above and include a link to this repository.
+
+** License
+This project is licensed under the GNU General Public License Version 2, June 1991. See the [[LICENSE]] file for details.
